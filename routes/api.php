@@ -26,3 +26,13 @@ require_once base_path(
 require_once base_path(
     'app/Http/Controllers/Color/Routes/routes.php'
 );
+
+// products
+require_once base_path(
+    'app/Http/Controllers/Product/Routes/routes.php'
+);
+
+// cart routes
+require_once base_path(
+    'app/Http/Controllers/Cart/Routes/routes.php'
+);

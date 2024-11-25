@@ -53,4 +53,10 @@ class Product extends Model
     {
         return $this->belongsToMany(Campaign::class, 'campaign_products');
     }
+
+    // cart
+    public function carts()
+    {
+        return $this->belongsToMany(Cart::class);
+    }
 }

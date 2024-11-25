@@ -15,11 +15,14 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->integer('quantity');
-            $table->decimal('per_piece_price')
+            $table->foreignIdFor(\App\Models\User::class)
                 ->nullable();
-                
-            $table->decimal('cart_total');
+            $table->integer('session_id')
+                ->nullable();
+
+            $table->enum('status', [
+                'active', 'completed', 'abandoned'
+            ]);
 
         });
     }

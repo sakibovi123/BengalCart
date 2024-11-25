@@ -19,6 +19,9 @@ return new class extends Migration
 
             $table->foreignIdFor(Cart::class);
             $table->foreignIdFor(Product::class);
+
+            $table->integer('quantity');
+            $table->decimal('cart_total', 10, 2);
         });
     }
 
