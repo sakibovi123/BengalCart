@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * @method static findOrFail(mixed $product_id)
+ */
 class Product extends Model
 {
 
@@ -52,5 +55,11 @@ class Product extends Model
     public function campaigns()
     {
         return $this->belongsToMany(Campaign::class, 'campaign_products');
+    }
+
+    // cart
+    public function carts()
+    {
+        return $this->belongsToMany(Cart::class);
     }
 }

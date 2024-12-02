@@ -14,12 +14,37 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 class AuthController extends Controller
 {
     /**
+     * Check email
+     * @if found then sign in
+     * @else sign up
+     */
+    public function checkEmail( Request $request )
+    {
+        $email = $request->get('email');
+
+        $isExisting = User::where('email', $email)->first();
+
+        if ( $isExisting )
+        {
+            return response()->json([
+                'success' => true,
+                'existence' => true,
+            ], 200);
+        }
+        else {
+            return response()->json([
+                'success' => true,
+                'existence' => false,
+            ], 200);
+        }
+    }
+    /**
      * Register a new user.
      */
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
+            'name' => 'nullable|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6',
         ]);

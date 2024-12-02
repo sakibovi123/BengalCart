@@ -4,7 +4,7 @@ namespace App\Http\Traits;
 
 trait ResponseTrait
 {
-    protected function successResponse( $data, $message = 'Success', $code = 200)
+    protected function successResponse( $data=null, $message, $code = 200)
     {
         return response()
             ->json([
