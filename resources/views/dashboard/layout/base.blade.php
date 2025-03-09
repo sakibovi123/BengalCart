@@ -15,6 +15,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
     <!-- Toastr JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.264.0/lucide.min.css">
 
 </head>
 
@@ -39,7 +40,6 @@
 {{--        </footer>--}}
 
         <!-- Include JavaScript files -->
-        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
         <script>
             // Toggle sidebar visibility on mobile
             document.getElementById('menu-toggle').addEventListener('click', () => {
