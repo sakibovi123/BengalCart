@@ -32,8 +32,9 @@
             <nav class="limiter-menu-desktop container">
 
                 <!-- Logo desktop -->
-                <a href="#" class="logo">
-                    <img src="{{ asset('frontend/images/icons/logo-01.png') }}" alt="IMG-LOGO">
+                <a href="#" class="logo fs-2 fw-bold">
+{{--                    <img src="{{ asset('frontend/images/icons/logo-01.png') }}" alt="IMG-LOGO">--}}
+                    ALTER MART
                 </a>
 
                 <!-- Menu desktop -->
